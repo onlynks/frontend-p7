@@ -39,11 +39,11 @@ class DefaultController extends Controller
             ]
         ]);
 
-        $fbResponse = json_decode($query->getBody()->getContents());
-        $token = $fbResponse->{'access_token'};
+        $fbResponse = json_decode($query->getBody()->getContents(), true);
+        $token = $fbResponse['access_token'];
 
         $client = new Client([
-            'base_uri'=>'http://localhost/Projet_7/web/'
+            'base_uri'=>'http://localhost/Projet_7/web/app_dev.php/'
         ]);
 
         $apiRequest = $client->request('GET', 'login', [
@@ -52,10 +52,10 @@ class DefaultController extends Controller
             ]
         ]);
 
-        $user = json_decode($apiRequest->getBody()->getContents());
+        $user = json_decode($apiRequest->getBody()->getContents(), true);
 
         return $this->render('admin.html.twig', [
-            'user'=>$user->{'name'}
+            'user'=>$user['name']
         ]);
     }
 }
