@@ -1,0 +1,22 @@
+{% extends 'base.html.twig' %}
+
+{% block body %}
+
+<div class="jumbotron">
+    <h1 class="display-4">Bienvenue sur l'interface de connexion à l'API</h1>
+
+    <p class="lead">Vous devez vous connectez avec Facebook afin d'obtenir un token.</p>
+
+    <a class="btn btn-primary btn-lg" href="https://www.facebook.com/v3.0/dialog/oauth?
+    client_id={{ id_api }}&redirect_uri={{ url('checkToken') }}" role="button">Testez votre Token</a>
+
+    <a class="btn btn-primary btn-lg" href="https://www.facebook.com/v3.0/dialog/oauth?
+    client_id={{ id_api }}&redirect_uri={{ url('register') }}"
+       role="button">Faites une demande d'inscription</a>
+
+    <a class="btn btn-primary btn-lg" href="https://www.facebook.com/v3.0/dialog/oauth?
+    client_id={{ id_api }}&redirect_uri={{ url('getToken') }}"
+       role="button">Obtenir un code</a>
+</div>
+{% endblock %}
+
