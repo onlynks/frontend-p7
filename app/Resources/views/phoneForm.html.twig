@@ -1,0 +1,17 @@
+{% extends 'base.html.twig' %}
+
+{% block body %}
+    <div class="ml-5 mt-5" style="max-width: 50%">
+        <h3>Enregistrer un téléphone:</h3>
+
+    {{ form_start(form) }}
+        {{ form_row(form.name, {'label':'Modèle'}) }}
+        {{ form_row(form.brand, {'label':'Marque'}) }}
+        {{ form_row(form.price, {'label':'Prix'}) }}
+        {{ form_row(form.token, {'label':'Votre token'}) }}
+    {{ form_widget(form) }}
+    {{ form_end(form) }}
+    </div>
+
+{% endblock %}
+

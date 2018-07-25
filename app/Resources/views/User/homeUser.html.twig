@@ -1,0 +1,18 @@
+{% extends 'base.html.twig' %}
+
+{% block body %}
+
+<div class="jumbotron">
+
+    <h1 class="display-4">User</h1>
+
+    <p class="lead">Vous devez vous connectez avec Facebook afin d'obtenir un token.</p>
+
+    <a class="btn btn-primary btn-lg" href="https://www.facebook.com/v3.0/dialog/oauth?
+    client_id={{ id_api }}&redirect_uri={{ url('getToken') }}"
+       role="button">Obtenir un code</a>
+    {{ test }}
+</div>
+
+{% endblock %}
+

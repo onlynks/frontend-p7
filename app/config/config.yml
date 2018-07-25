@@ -38,6 +38,7 @@ twig:
     globals:
           id_api: %id_api%
           api_key: %api_key%
+    form_themes: ['bootstrap_4_layout.html.twig']
 
 # Doctrine Configuration
 doctrine:
