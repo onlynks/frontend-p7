@@ -20,3 +20,4 @@ parameters:
 
     id_api: ~
     api_key: ~
+    images_path: '/Projet_7/web/Images/'
